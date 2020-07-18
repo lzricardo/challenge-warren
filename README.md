@@ -31,15 +31,14 @@ Podendo ser com qualquer banco, Itau, Nubank, etc. Nos links úteis existem algu
 
 # Links úteis:
 
-Wikipedia
-https://en.wikipedia.org/wiki/Web_scraping
-Python
-https://github.com/AndreCGusmao/bankscraper.git
-Ruby:
-https://github.com/buccolo/itau_bot/tree/master/lib
+Wikipedia https://en.wikipedia.org/wiki/Web_scraping
+
+Python https://github.com/AndreCGusmao/bankscraper.git
+
+Ruby https://github.com/buccolo/itau_bot/tree/master/lib
 
 # Quem usa isso?
-Guia Bolso
-https://www.guiabolso.com.br/
-Meu Dinheiro
-https://www.meudinheiroweb.com.br/
+
+Guia Bolso https://www.guiabolso.com.br/
+
+Meu Dinheiro https://www.meudinheiroweb.com.br/

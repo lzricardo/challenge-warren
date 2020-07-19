@@ -1,0 +1,31 @@
+{
+  "name": "challenge-warren",
+  "version": "1.0.0",
+  "description": "This repository contains the solution to Warren's challenge.",
+  "main": "server.js",
+  "repository": "git@github.com:lzricardo/challenge-warren.git",
+  "author": "Luiz Ricardo <lzricardo.ecomp@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production ./node_modules/pm2/bin/pm2-runtime src/server.js --name Warren API",
+    "dev": "NODE_ENV=development nodemon src/server.js --ignore __tests__",
+    "debug": "NODE_ENV=debug nodemon --inspect src/server.js --ignore __tests__",
+    "test": "NODE_ENV=test jest --runInBand --detectOpenHandles"
+  },
+  "private": true,
+  "dependencies": {
+    "@sentry/node": "^5.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "pm2": "^4.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}

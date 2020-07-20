@@ -12,6 +12,20 @@ class Puppeteer extends Engine {
     async initialize() {
         this.browser = await puppeteer.launch(this.options);
         this.page = await this.browser.newPage();
+
+        //pegar #account e digitar a agência
+        //clicar no botão acessar seguinte ao elemento account
+        //buscar "Clique nas iniciais do seu nome para inserir a senha: " pegar o h1 seguinte e dentro dele gerar um clique no link <a>
+        //buscar o #panelTeclado
+        //buscar o #bgTeclado
+        //pegar a div seguinte
+        //pegar a primeira div
+        //buscar o campo do tipo password
+        //Digitar a senha
+        //pegar a segunda div
+        //buscar o input value confirmar ou title Confirmar e clicar nele
+        //solicitar a autenticação de duas etapas
+
         await this.page.goto(this.url);
     }
 

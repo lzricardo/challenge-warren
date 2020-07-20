@@ -5,12 +5,12 @@ const v1 = require('express').Router();
 //Scrapper
 
 //Controllers
-const ScrapperController = require('../app/controllers/ScrapperController');
+const ScrapperController = require('../app/controllers/scrapper_controller');
 
 //Routes
 
 //Tournament resource
-v1.route('/scrapper/:type:/execute')
+v1.route('/scrapper/execute')
   .post(ScrapperController.execute)
 ;
 

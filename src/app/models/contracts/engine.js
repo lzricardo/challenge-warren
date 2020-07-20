@@ -1,4 +1,8 @@
 class Engine {
+    initialize() {
+
+    }
+
     scrape() {
 
     }

@@ -1,8 +1,8 @@
 const Scrapper = require('./contracts/scrapper');
 
 class Bbot extends Scrapper {
-    constructor(plan, persister, options) {
-        super(plan, persister,options);
+    constructor(engine, plan, persister, options) {
+        super(engine, plan, persister, options);
     }
 }
 

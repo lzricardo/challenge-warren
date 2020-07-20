@@ -1,13 +1,17 @@
 class Scrapper {
-    constructor(plan, engine, persister, options) {
-        this.plan = plan;
+    constructor(engine, plan, persister, options) {
         this.engine = engine;
+        this.plan = plan;
         this.persister = persister;
         this.options = options;
     }
 
-    execute() {
-        this.persister.save(this.engine.execute(this.plan, this.options));
+    async execute() {
+        await this.engine.initialize();
+
+        // return await this.persister.save(await this.engine.scrape(this.plan));
+
+        return await this.engine.scrape(this.plan);
     }
 }
 

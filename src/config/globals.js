@@ -1,3 +1,3 @@
 console.log('Initialize and setup variables globally');
 
-global.mongoose = require('../config/mongoose')();
+// global.var_name = require('..');

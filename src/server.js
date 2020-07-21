@@ -2,6 +2,7 @@ require('./config/constants');
 require('./config/error');
 require('./config/environment');
 require('./config/console');
+require('./config/mongoose');
 require('./config/globals');
 
 const app = require('./app');

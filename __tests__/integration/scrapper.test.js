@@ -1,5 +1,6 @@
 require('../../src/config/constants');
 require('../../src/config/environment');
+require('../../src/config/mongoose');
 require('../../src/config/globals');
 
 const request = require('supertest'),

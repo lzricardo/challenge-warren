@@ -1,9 +1,14 @@
+require('../../src/config/constants');
+require('../../src/config/environment');
+require('../../src/config/globals');
+
 const request = require('supertest'),
     app = require('../../src/app'),
     BankSiteMock = require('../__mocks__/server_bank_site'),
     BotTester = require('../__mocks__/bot_tester'),
     TesterPlan = require('../__mocks__/tester_plan'),
-    TesterEngine = require('../__mocks__/tester_engine')
+    TesterEngine = require('../__mocks__/tester_engine'),
+    BucketsScrappedProduced = require('../../src/app/models/dao/buckets_scrapped_produced')
 ;
 
 let bankSiteMock;
@@ -20,10 +25,11 @@ afterAll(async () => {
 
 describe('Scrapper\'s operations', () => {
     it('should to scrape internally the site mock successfully', async () => {
-        const testerEngine = new TesterEngine('http://localhost:5555', {headless: true});
-        //     // bucketsScrappedProduced = new BucketsScrappedProduced(),
-        //
-        const btester = new BotTester(testerEngine, TesterPlan(), null, {});
+        const testerEngine = new TesterEngine('http://localhost:5555', {headless: true}),
+            bucketsScrappedProduced = new BucketsScrappedProduced
+        ;
+
+        const btester = new BotTester(testerEngine, TesterPlan(), bucketsScrappedProduced, {});
 
         const {name, balance} = await btester.execute();
 

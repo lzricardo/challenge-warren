@@ -9,9 +9,7 @@ class Scrapper {
     async execute() {
         await this.engine.initialize();
 
-        // return await this.persister.save(await this.engine.scrape(this.plan));
-
-        return await this.engine.scrape(this.plan);
+        return await this.persister.save(await this.engine.scrape(this.plan));
     }
 }
 
